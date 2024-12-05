@@ -2,13 +2,15 @@
 declare(strict_types=1);
 require_once '../Transaction.php';
 
+use test\Transaction as namedTransaction; // this is a way of importing a namespace
 // classes & objects
 // chaining is better for building objects dont use it on everything
-$transaction1 = (new Transaction(100, 'Transaction 1'))
+$transaction1 = (new test\Transaction(100, 'Transaction 1'))
     ->addTax(8)
     ->applyDiscount(10);
 
-$transaction2 = (new Transaction(200, 'Transaction 2'))
+// test\ shows that the transaction class is in the test namespace
+$transaction2 = (new namedTransaction(200, 'Transaction 2'))
     ->addTax(8)
     ->applyDiscount(15);
 
