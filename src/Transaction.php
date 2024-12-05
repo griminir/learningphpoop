@@ -3,13 +3,19 @@ declare(strict_types=1);
 
 class Transaction
 {
-    private float $amount;
-    private string $description;
+    // older/another way of doing constructor
+    // private float $amount;
+    // private string $description;
 
-    public function __construct(float $amount, string $description)
+    // public function __construct(float $amount, string $description)
+    // {
+    //     $this->amount = $amount;
+    //     $this->description = $description;
+    // }
+
+    // constructor shorthand 8.0 php
+    public function __construct(private float $amount, private ?string $description = null)
     {
-        $this->amount = $amount;
-        $this->description = $description;
     }
 
     public function addTax(float $tax): Transaction
@@ -29,8 +35,9 @@ class Transaction
         return $this->amount;
     }
 
-    public function __destruct()
-    {
-        echo "destructor {$this->description} completed" . '<br>';
-    }
+    // not really used
+    // public function __destruct()
+    // {
+    //     echo "destructor {$this->description} completed" . '<br>';
+    // }
 }

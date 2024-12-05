@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
-// classes & objects
 require_once '../Transaction.php';
 
+// classes & objects
 // chaining is better for building objects dont use it on everything
 $transaction1 = (new Transaction(100, 'Transaction 1'))
     ->addTax(8)
