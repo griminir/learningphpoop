@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once '../Transaction.php';
+require_once __DIR__ . '/../testGround/Transaction.php';
 
 use test\Transaction as namedTransaction; // this is a way of importing a namespace
 // classes & objects
