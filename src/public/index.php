@@ -10,18 +10,16 @@ declare(strict_types=1);
 //     }
 // });
 
+use App\Enums\Status;
+use App\PaymentGateway\Paddle\Transaction;
+
 // using the composer autoloader is the prefered way during development
 // running composer dump-autoload will regenerate the autoload files
 // for production you should use classmap autoloading to run faster
 // composer dump-autoload -o
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\PaymentGateway\Paddle\Transaction;
-
 $paddleTransaction = new Transaction();
-
-$id = new \Ramsey\Uuid\UuidFactory();
-
-echo $id->uuid4();
+$paddleTransaction->setStatus(Status::PAID);
 
 var_dump($paddleTransaction);
