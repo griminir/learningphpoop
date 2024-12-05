@@ -10,7 +10,6 @@ declare(strict_types=1);
 //     }
 // });
 
-use App\Enums\Status;
 use App\PaymentGateway\Paddle\Transaction;
 
 // using the composer autoloader is the prefered way during development
@@ -19,7 +18,6 @@ use App\PaymentGateway\Paddle\Transaction;
 // composer dump-autoload -o
 require __DIR__ . '/../vendor/autoload.php';
 
-$paddleTransaction = new Transaction();
-$paddleTransaction->setStatus(Status::PAID);
+$tranaction = new Transaction(100, 'Test Transaction');
 
-var_dump($paddleTransaction);
+var_dump(Transaction::$count);
