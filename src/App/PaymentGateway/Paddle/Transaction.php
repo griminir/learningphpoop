@@ -12,8 +12,4 @@ class Transaction
         
     }
     
-    public function process(): void
-    {
-        echo 'Processing Paddle transaction'; 
-    }
 }
