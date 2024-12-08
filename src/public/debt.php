@@ -3,7 +3,6 @@
 
 require_once __DIR__ . '/../testGround/DebtColletionService.php';
 require_once __DIR__ . '/../testGround/CollectionAgency.php';
-require_once __DIR__ . '/../testGround/IDebtCollector.php';
 require_once __DIR__ . '/../testGround/Rocky.php';
 
 use testGround\DebtCollectionService;
