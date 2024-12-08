@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__ . '/../testGround/Transaction.php';
-require_once __DIR__ . '/../App/Enums/Status.php';
+require_once __DIR__ . '/../../testGround/Transaction.php';
+require_once __DIR__ . '/../../App/Enums/Status.php';
 
 
 use test\Transaction as namedTransaction; // this is a way of importing a namespace

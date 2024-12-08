@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-require_once __DIR__ . '/../testGround/Toaster.php';
-require_once __DIR__ . '/../testGround/ToasterPro.php';
+require_once __DIR__ . '/../../testGround/Toaster.php';
+require_once __DIR__ . '/../../testGround/ToasterPro.php';
 
 use testGround\Toaster;
 use testGround\ToasterPro;
