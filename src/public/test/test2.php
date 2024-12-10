@@ -7,7 +7,6 @@ require_once __DIR__ . '/../../testGround/DocBlock.php';
 
 use testGround\Toaster;
 use testGround\ToasterPro;
-use testGround\DocBlock;
 use testGround\Transaction2;
 
 $toaster = new ToasterPro();
