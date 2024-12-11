@@ -10,14 +10,17 @@ declare(strict_types=1);
 //     }
 // });
 
-use App\PaymentGateway\Paddle\Transaction;
-
 // using the composer autoloader is the prefered way during development
 // running composer dump-autoload will regenerate the autoload files
 // for production you should use classmap autoloading to run faster
 // composer dump-autoload -o
 require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../testGround/Router.php';
 
-$tranaction = new Transaction(100, 'Test Transaction');
+$router = new testGround\Router();
+$router->register('/', [\App\Classes\Home::class, 'index'])
+    ->register('/invoices', [\App\Classes\Invoice::class, 'index'])
+    ->register('/invoices/create', [\App\Classes\Invoice::class, 'create']);
 
-var_dump(Transaction::$count);
+
+echo $router->resolve($_SERVER['REQUEST_URI']);
